@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    // 1. Crie um algorítimo que verifique se o valor de uma determinada variável
+    // é maior ou menor que o número 10.
+
+    // a) Se o valor da variável for maior que 10, imprimir no console:
+    // "Valor maior que 10"
+
+    // b) Se for menor que 10, imprimir no console:
+    // "Valor menor que 10"
+
+    function verificar_var(variavel) {
+        if (variavel > 10) {
+            return `Valor MAIOR que 10 (${variavel})`
+        } else if (variavel == 10) {
+            return `Valor IGUAL a 10 (${variavel})`
+        } else {
+            return `Valor MENOR que 10 (${variavel})`
+        }
+    }
+
+    console.log(verificar_var(11))
+    console.log(verificar_var(10))
+    console.log(verificar_var(9))
+</script>
+
+<body>
+</body>
+
+</html>
