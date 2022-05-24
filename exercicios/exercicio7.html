@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <script>
-    
+    const nome = prompt(`Informe seu nome`)
+    const idade = prompt(`Informe sua idade`)
+    let msg
+
+    const wrt = (p) => document.write(p)
+
+    const formular_resposta = ((nome, idade) => {
+        wrt(`Nome do usuário: ${nome}<br>`)
+        wrt(`Idade do usuário: ${idade}. ${verificar_idade(idade)}.`)
+    })(nome, idade)
+
+    function verificar_idade(idade) {
+        if (idade > 18) {
+            msg = `maior que`
+        } else if (idade == 18) {
+            msg = `igual a`
+        } else {
+            msg = `menor que`
+        }
+        return `Você tem idade ${msg} 18 anos`
+    }
+
 </script>
 
 <body>
-    
+
 </body>
 
 </html>

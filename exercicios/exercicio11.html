@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#btn{
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+	<button id="btn">Iniciar</button>
+	<p></p>
+
+	<script>
+		let listaNomes = ['A', 'B', 'C', 'D', 'E']
+		const btnIniciar = document.getElementById('btn')
+
+
+		btnIniciar.addEventListener('click', function () {
+			let novoNome = prompt('Insira um nome')
+			let numeroIndice = prompt('Insira um numero')
+			formular_resposta(listaNomes, novoNome, numeroIndice)
+		})
+
+		// ____________________________________Functions_____________________________________
+
+		const wrt = (p) => document.write(p)
+
+		const formular_resposta = (array, item, i) => {
+			wrt(`Quantidade de elementos do array...: ${array.length}<br>`)
+
+			array.push(item)
+
+			if (array[i - 1] !== undefined) {
+				wrt(`Você escolheu o item ${i} da lista que é o nome ¨${array[i - 1]}¨<br>`,)
+			} else {
+				wrt(`Você escolheu o item ${i} que não está na lista<br>`,)
+			}
+			wrt(`A Quantidade atual de nomes na lista é de..: ${array.length}<br>`,)
+		}
+
+	</script>
+</body>
+
+</html>

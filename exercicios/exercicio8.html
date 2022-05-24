@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.container {
+            width: fit-content;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        form.container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        #btn,
+        form div{
+            width: 100%;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Verificar qual o maior valor!</h1>
+        <form class="container">
+
+            <input type="number" id="input1" placeholder="Insira o valor 1">
+            <input type="number" id="input2" placeholder="Insira o valor 2">
+            <button id="btn">Verificar</button>
+            <div
+                style="width: fit-content; min-width: 100%; margin-top: 20px; height: 30px; display: flex; align-items: center; padding: 0px;">
+                <p id="resposta">Resultado</p>
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+<script>
+    const btn = document.getElementById('btn')
+    let reposta = document.getElementById('resposta')
+
+    btn.addEventListener('click', (e) => {
+        let input1 = Number(document.getElementById('input1').value)
+        let input2 = Number(document.getElementById('input2').value)
+        verificar_valorMaior(input1, input2)
+        event.preventDefault()
+    })
+
+    function verificar_valorMaior(a, b) {
+        let maiorValor
+        let msg
+        if (a != b) {
+            if (a > b) {
+                maiorValor = a
+            } else {
+                maiorValor = b
+
+            }
+            reposta.innerHTML = `O maior valor é ${maiorValor}.`
+        } else {
+            reposta.innerHTML = `Valores iguais.`
+        }
+    }
+</script>
+
+</html>
