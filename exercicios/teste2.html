@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+
+</body>
+<script>
+    const body = document.getElementById('body')
+    let nome = prompt('nome')
+    let idade = prompt('idade')
+    let teste = prompt('teste')
+
+    let Pessoas = {
+        nome: nome,
+        idade: idade,
+        teste : teste
+    }
+    for (let propriedade in Pessoas) {
+        document.write(`${propriedade.replace(propriedade[0],propriedade[0].toUpperCase())}: ${Pessoas[propriedade]}<br>`)
+    }
+
+</script>
+
+</html>

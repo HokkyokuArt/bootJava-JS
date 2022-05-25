@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Crie um programa, por meio de uma função, que receberá um objeto como
+    // parâmetro. Esta função deverá ter como saída o nome das propriedades e
+    // seus respectivos valores. O objeto irá conter uma relação de frutas e seus
+    // preços.
+    
+    let listaDeFrutas = [
+        {
+            fruta: 'Laranja',
+            preco: 2.3
+        },
+        {
+            fruta: 'Uva',
+            preco: 3.1
+        },
+        {
+            fruta: 'Banana',
+            preco: 10
+        },
+        {
+            legume: 'Milhão',
+            preco: 1000000
+        }
+    ]
+
+    const listar_frutas = ((listaDeFrutas) => {
+        let total = 0
+        for (let item of listaDeFrutas) {
+            for (let valor in item) {
+                if (valor === 'preco') {
+                    total += item[valor]
+                    item[valor] = item[valor].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                }
+                document.write(`${valor.replace(valor[0], valor[0].toUpperCase())}: ${item[valor]}<br>`)
+            }
+            document.write('<br>')
+        }
+        document.write(`Total: ${total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`)
+    })(listaDeFrutas)
+
+
+</script>
+
+</html>

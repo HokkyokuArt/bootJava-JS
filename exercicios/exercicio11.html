@@ -6,19 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		*{
+		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
 		}
-		body{
+
+		body {
 			width: 100%;
 			height: 100vh;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
-		#btn{
+
+		#btn {
 			padding: 10px 20px;
 			cursor: pointer;
 		}
@@ -31,6 +33,18 @@
 	<p></p>
 
 	<script>
+		// 1. Criar um array de uma lista de nomes com no mínimo de 5elementos;
+		// 2. Criar uma função que receberá:
+		// 		3 parâmetros; um parâmetro será para enviar o array, o segundo parâmetros será para enviar
+		// um novo nome para o array, que deverá ser inserido na lista de nomes. O terceiro parâmetro será
+		// enviado um número inteiro, que servirá de índice para que seja impresso no console um determinado
+		// nome que está na lista do array.
+
+		// A saída da função deverá ser:
+		// Quantidade de elementos do array ...:6
+		// Você escolheu o índice 2 que é o elemento Mariana
+		// A quantidade atual de elementos do array é de ...:7
+		
 		let listaNomes = ['A', 'B', 'C', 'D', 'E']
 		const btnIniciar = document.getElementById('btn')
 

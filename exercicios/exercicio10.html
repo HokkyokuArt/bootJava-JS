@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>    
+
+<body>
 </body>
 <script>
+    let nome = prompt(`Qual o seu nome?`)
     let altura = prompt(`Qual a sua altura?`)
     let peso = prompt(`Quanto você pesa?`)
-    let nome = prompt(`Qual o seu nome?`)
 
-    let calcular_IMC = ((altura, peso, nome)=>{
-        let imc = (peso/(altura*2)).toFixed(2)
+
+    // ____________________________________Functions_____________________________________//
+
+    let calcular_IMC = ((altura, peso, nome) => {
+        let imc = (peso / (altura * 2)).toFixed(2)
         document.write(`Nome: ${nome}<br>`)
         document.write(`Altura: ${altura}<br>`)
         document.write(`Peso: ${peso}<br>`)
         document.write(`IMC: ${imc}<br>`)
-        document.write(valores_imc(imc))
+        document.write(`Você está com ${valores_imc(imc)}.`)
     })(altura, peso, nome)
 
-    function valores_imc(imc){
-        if(imc<=18.5){
-            return `Peso baixo<br>`
-        }else if(imc<25){
-            return `Peso Normal<br>`
-        }else if(imc<30){
+    function valores_imc(imc) {
+        if (imc <= 18.5) {
+            return `Peso baixo`
+        } else if (imc < 25) {
+            return `Peso Normal`
+        } else if (imc < 30) {
             return `Sobrepeso`
-        }else if(imc<35){
-            return `Obesidade (Grau I)<br>`
-        }else if(imc<40){
-            return `Obesidade severa (Grau II)<br>`
-        } else{
-            return `Obesidade mórbida (Grau III)<br>`
+        } else if (imc < 35) {
+            return `Obesidade (Grau I)`
+        } else if (imc < 40) {
+            return `Obesidade severa (Grau II)`
+        } else {
+            return `Obesidade mórbida (Grau III)`
         }
     }
 </script>
+
 </html>

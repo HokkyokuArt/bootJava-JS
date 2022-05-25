@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">
+        registrar nova pessoa
+    </button>
+    <button id="btn2">
+        pesquisar pessoa
+    </button>
+    <div id="contador" style="border: solid 1px black; width: 50px; height: 50px;display: flex; align-items: center; justify-content: center; margin: 20px 100px;">0</div>
+    <ul id="lista">
+        
+    </ul>
+
+</body>
+<script>
+
+    let listaDePessoas = []
+
+    function Pessoa(nome, idade, sexo, profissao, status) {
+        this.nome = nome,
+            this.idade = idade,
+            this.sexo = sexo,
+            this.profissao = profissao,
+            this.status = status
+    }
+
+    const btn = document.getElementById('btn')
+    const btn_index = document.getElementById('btn2')
+    const lista = document.getElementById('lista')
+    const contador = document.getElementById('contador')
+
+    btn.addEventListener('click', function () {
+
+        alert('Campos marcados com * são obrigatórios')
+        let novaPessoa = new Pessoa(
+            nome = prompt('Digite seu nome:*'),
+            idade = prompt('Digite sua idade:*'),
+            sexo = prompt('Digite seu sexo:*'),
+            profissao = prompt('Digite sua profissão:*'),
+            biografia = prompt('Digite seu status:')
+        )
+        if(novaPessoa.nome && novaPessoa.idade && novaPessoa.sexo && novaPessoa.profissao){
+            listaDePessoas.push(novaPessoa)
+            lista.innerHTML = `Registro adicionado com sucesso`
+            contador.innerHTML = listaDePessoas.length
+
+        } else {
+            lista.innerHTML = `Por favor insira todos os dados`
+        }
+       
+        
+           
+    })
+    
+    btn_index.addEventListener('click', function(){
+        let index = prompt('insira o id da pessoa que deseja procurar')
+        if(listaDePessoas[index-1]){
+            lista.innerHTML = `<li>Id: ${index}<br>Nome: ${listaDePessoas[index-1].nome}<br>Idade: ${listaDePessoas[index-1].idade}<br>Sexo: ${listaDePessoas[index-1].sexo}<br>Profissao: ${listaDePessoas[index-1].profissao}<br>Status: ${listaDePessoas[index-1].status}</li>`
+        } else {
+            lista.innerHTML = `Registro não encontrado`
+        }
+        
+    
+    })
+    
+</script>
+
+</html>
