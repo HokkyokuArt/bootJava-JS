@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora de tabuada</h1>
+    <h2>Insira um numero de 1 a 10</h2>
+    <input type="text" id="input" placeholder="Insira aqui">
+    <button id="btn">calcular</button>
+    <div id="resposta"
+        style="height: auto; width: 200px; border: 1px solid darkgray;  margin-top: 20px; padding: 10px;">A reposta
+        aparecerá aqui </div>
+</body>
+<script>
+    // Refatore o exercício anterior, usando a mesma função “tabuada" para receber o valor de um elemento de entrada input.
+    // a) A função será executada quando o usuário clicar no botão 
+    // b) Todas as mensagens de retorno deverão ser mostradas na página em um “el” html
+    // Nota: não use o métodos documento.write como método de saída.
+
+    const input = document.querySelector('#input')
+    const btn = document.querySelector('#btn')
+    const resposta = document.querySelector('#resposta')
+
+    btn.addEventListener('click', function () {
+        tabuada_de10(parseInt(input.value))
+    })
+
+    document.addEventListener('keypress', function (e) {
+        if (e.which == 13) {
+            tabuada_de10(parseInt(input.value))
+        }
+    }, false);
+
+
+    function tabuada_de10(numero) {
+
+        if (!isNaN(numero)) {
+            if (numero < 1 || numero > 10) resposta.innerHTML = `Insira um número entre 1 a 10`
+            else {
+                let formularResposta = `Tabuada do ${numero}:<br>`
+                for (let i = 1; i <= 10; i++) formularResposta += `${numero} x ${i} = ${numero * i}<br>`
+                resposta.innerHTML = formularResposta
+            }
+        } else resposta.innerHTML = `Insira um número`
+    
+        input.value = ''
+    }
+
+</script>
+
+</html>
