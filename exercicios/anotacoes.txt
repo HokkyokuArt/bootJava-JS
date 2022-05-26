@@ -1,0 +1,44 @@
+
+EVENTS
+
+click     | Ao clicar em algum elemento HTML
+mousemove | Ao mover o cursor do mouse acessa (entra) o elemento
+mouseover | Ao mover o cursor do mouse dentro do elemento
+mouseout  | Ao mover o cursor para fora do elemento
+dblclick  | Ao efetuar do duplo click (rápido) sobre o elemento
+keydown   | Ao pressionar uma tecla
+keyup     | Ao liberar uma tecla (depois de pressionada).
+scroll    | Ao rolar a barra de "rolagem" (scroll) de algum elemento.
+blur      | Ao perder o foco do elemento, geralmente associado ao elemento HTML text
+load      | Ao carregar a página ou elemento, geralmente associado ao objeto window
+
+
+Métodos de interação com o DOM - JAVASCRIPT
+
+el.: retorna atributos como type | value | name | id | class e outros
+el.innerHTML: escreve ou retorna o texto. Se retornar traz estrutura html que possa estar no elemento.
+el.innerText: escreve ou retorna todo o texto. Se retornar aplicações da classes internas são assumidas
+el.textContent: escreve ou retorna todo o texto. Se retornar desconsidera qualquer tag e ou classe
+el.getAttribute: captura um atributo-type - name - value etc.
+el.setAttribute: adiciona um atributo dinamicamente
+el.appendChild: adiciona um elemento filho no elemento pai
+el.removeChild: remove um elemento filho do elemento pai
+el.classList: add (adiciona uma classe)| remove(remove uma classe) | toggle (adiciona ou remove)
+el.type: retorna o tipo do elemento
+el.key: retonar o valor da tecla pressionada
+el.keyCod:retorna o código da tecla pressionada
+el.style: backgroundColor | border | margin | display ..etc.
+el.dataset: data attributes são tags atributos criadas e incorporadas no el html e recuperadas
+el.remove: exclui um elemento do DOM
+
+
+    const ulpai = document.querySelectorAll("#ulPai");
+    ulPai.forEach(function(lista){
+        lista.addEventListener('click', function (elemento) {
+            alert (elemento.target.innerHTML);
+        })
+
+    })
+
+
+
