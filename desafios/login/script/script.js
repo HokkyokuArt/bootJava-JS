@@ -1,42 +1,46 @@
-window.onload = function () {
+// window.onload = function () {
     const user = document.querySelector('#user')
     const pws = document.querySelector('#pws')
     const btn = document.querySelector('#btn')
 
     btn.addEventListener('click', (e) => {
-        
-            e.preventDefault()
-        verificar_Credenciais(user.value, pws.value)
-            
-
-
+        e.preventDefault()
+        fazer_requisicao()
     })
 
 
 
-    let verificar_Credenciais = async function(){
-        let usuarios = `http://localhost/bootJava-JS/desafios/login/script/usuario.json`
+    let fazer_requisicao = async function () {
+        let usuarios = `./script/usuario.json`
         let dadosFetch = await fetch(usuarios)
         let dadosJson = await dadosFetch.json();
-        // console.log(dadosJson)
-        resultadoLogin(dadosJson);
-        
-        
-            
+    
+        verificar_Credenciais(dadosJson.users);
+
     }
 
-    function resultadoLogin(dadosJson){
+    function verificar_Credenciais(dadosJson) {
 
-        for( let dado in dadosJson){
+        
+        const findUser = dadosJson.find((item) => {
+            return item.user === user.value && item.pws === pws.value;
+        })
+
+        if(findUser){
+            user.value = ''
+            pws.value = ''
+            window.location.href = `../panel/panel.html`
             
+            
+        } else {
+            alert(`Usuario ou senha incorreta`)
         }
+        
+        
 
     }
 
 
-    // ((user, pws)=>{
-            
-    // })(user.value, pws.value)
 
 
 
@@ -49,4 +53,4 @@ window.onload = function () {
 
 
 
-} // Fim do onload
+// } // Fim do onload
