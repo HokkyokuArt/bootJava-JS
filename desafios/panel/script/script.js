@@ -11,7 +11,7 @@ liClientes.addEventListener('click', () => {
 
     let input = document.createElement('input')
     input.setAttribute('id', 'testeTeste')
-    conteudo.innerHTML= `<input id="inputTeste" value=""> <button type="button" id="btn">Click</button> <input id="inputResposta" value="" disabled>`
+    conteudo.innerHTML= `` //
 
     const inputTeste = document.querySelector('#inputTeste')
     const btn = document.querySelector('#btn')
@@ -31,7 +31,7 @@ liProdutos.addEventListener('click', () => {
 
     let input = document.createElement('input')
     input.setAttribute('id', 'testeTeste')
-    conteudo.innerHTML= `<input id="inputTeste" value=""><input id="inputTeste" value=""><input id="inputTeste" value=""><input id="inputTeste" value=""> <button type="button" id="btn">Click</button> <input id="inputResposta" value="" disabled>`
+    conteudo.innerHTML= `` //
 
     const inputTeste = document.querySelector('#inputTeste')
     const btn = document.querySelector('#btn')

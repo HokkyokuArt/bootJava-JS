@@ -46,8 +46,33 @@
             </ul>
         </nav>
         <div id="content" class="content">
-            
-            
+            <form>
+                <h1>Clientes</h1>
+
+                <label for="inputCodigo">Código</label>
+                <input type="text" name="inputCodigo" placeholder="Digite o código">
+
+                <label for="inputNome">Nome</label>
+                <input type="text" name="inputNome" placeholder="Digite o nome">
+
+                <label for="dataCadastro">Data do Cadastro</label>
+                <input type="datetime-local" name="dataCadastro" placeholder="Digite a data do cadastro">
+
+                <div id="btns">
+                    <div id="btnsNavegacao">
+                        <button type="button" id="btnAnterior" class="btn"><</button>
+                        <button type="button" id="btnProximo" class="btn">></button>
+                    </div>
+                    <div id="btnsAcoes">
+                        <button type="button" id="btnNovo" class="btn">Novo</button>
+                        <button type="button" id="btnSalvar" class="btn">Salvar</button>
+                    </div>
+                </div>
+
+
+
+
+            </form>
 
         </div>
     </main>
