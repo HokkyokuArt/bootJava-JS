@@ -15,16 +15,13 @@
     // palavra.
 
     let palavra = prompt('Insira uma palavra:')
-
     let reverseString = (palavra) => {
         if (palavra === "") {
             return "";
-
         } else {
             return reverseString(palavra.substr(1)) + palavra.charAt(0);
         }
     }
-    
     if(palavra)document.write(reverseString(palavra))
 </script>
 

@@ -12,13 +12,13 @@
         // a) A função deverá verificar se o parâmetro é um número
         // b) A função deverá verificar se o parâmetro está entre 1 e 10
         // c) O resultado sairá no console
+        
         alert(`Abra o console para ver o resultado. Aperte F12.`)
         const tabuada_de10 = (() => {
             let numero
             while (0 >= numero || numero > 10 || isNaN(numero)) numero = parseInt(prompt('Por favor insira um número entre 1 e 10'))
             for (let i = 1; i <= 10; i++) console.log(`${numero} x ${i} = ${numero * i}`)
         })()
-    
     </script>
 </head>
 

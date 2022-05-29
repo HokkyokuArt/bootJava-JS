@@ -10,9 +10,7 @@
     const nome = prompt(`Informe seu nome`)
     const idade = prompt(`Informe sua idade`)
     let msg
-
     const wrt = (p) => document.write(p)
-
     const formular_resposta = ((nome, idade) => {
         wrt(`Nome do usuário: ${nome}<br>`)
         wrt(`Idade do usuário: ${idade}. ${verificar_idade(idade)}.`)

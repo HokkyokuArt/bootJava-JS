@@ -42,28 +42,23 @@
     <input type="text" class="ipt" id="input2" placeholder="Insira o valor 2">
     =
     <input type="text" class="ipt" id="input3" disabled="disabled" placeholder="Resultado">
-
 </body>
 <script>
-// Crie uma função que some dois valores.
-// a)Os valores serão adicionados em dois elementos inputs
-// b)Oresultado será apresentado em um terceiro elemento input
-// c)Asoma será efetuada quando perderofoco do segundo input
+    // Crie uma função que some dois valores.
+    // a)Os valores serão adicionados em dois elementos inputs
+    // b)Oresultado será apresentado em um terceiro elemento input
+    // c)Asoma será efetuada quando perderofoco do segundo input
     const input1 = document.querySelector('#input1')
     const input2 = document.querySelector('#input2')
     const input3 = document.querySelector('#input3')
 
-    
-    input2.addEventListener('blur', function(){
+    input2.addEventListener('blur', function () {
         somar(parseInt(input1.value), parseInt(input2.value))
     })
-    const somar = (valor1,valor2)=>{
-        
-            if(isNaN(valor1)||isNaN(valor1)) input3.value = `Insira apenas números`
-            else input3.value = valor1+valor2
-
-        }
-
+    const somar = (valor1, valor2) => {
+        if (isNaN(valor1) || isNaN(valor1)) input3.value = `Insira apenas números`
+        else input3.value = valor1 + valor2
+    }
 </script>
 
 </html>

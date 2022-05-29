@@ -37,8 +37,4 @@ el.remove: exclui um elemento do DOM
         lista.addEventListener('click', function (elemento) {
             alert (elemento.target.innerHTML);
         })
-
     })
-
-
-
