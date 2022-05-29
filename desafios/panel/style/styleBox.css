@@ -1,40 +1,163 @@
-/* __________________________ CLIENTES __________________________*/
-.content > form{
-    width: 40%;
-    height: max-content;
+/* __________________________ CLIENTES/PRODUTOS __________________________*/
+.content>form {
+    width: 350px;
+    height: fit-content;
     background-color: white;
     display: flex;
     flex-direction: column;
     padding: 15px;
+    position: relative;
+    margin: 30px;
+    border-radius: 5px;
 }
 
-#btns{
+h1 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    font-size: x-large;
+}
+
+form>input,
+div>input {
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    outline: none;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid rgb(106, 106, 106);
+}
+
+input:disabled {
+    border: 1px solid rgb(198, 198, 198);
+    color: rgb(106, 106, 106);
+}
+
+#btns {
     display: flex;
     justify-content: space-between;
+
 }
 
-.btn{
-    padding: 3px 20px;
+.btn {
+    padding: 3px 15px;
     font-size: 80%;
     color: white;
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-#btnsNavegacao > .btn{
-    background-color: purple;
+#btnFechar {
+    color: #d32f2f;
+    background-color: inherit;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bolder;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
 }
 
-#btnNovo{
-    background-color: greenyellow;
+
+#btnsNavegacao>.btn {
+    background-color: #673ab7;
 }
 
-#btnSalvar{
-    background-color: greenyellow;
+#btnsAcoes {
+    flex-wrap: wrap;
 }
 
+#btnsAcoes>.btn {
+    width: 80px;
+}
 
-/* __________________________ PRODUTOS __________________________*/
+#btnNovo {
+    background-color: #1976d2;
+}
+
+#btnSalvar {
+    background-color: #2e7d32;
+}
 
 /* __________________________ PEDIDOS __________________________*/
 
+.content>#formPedidos {
+    width: auto;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+form>input {
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    outline: none;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+
+td,
+th {
+    text-align: left;
+}
+
+hr {
+    margin-top: 5px;
+}
+
+#formPedidos>p {
+    color: #443696;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#divLocalizarPedido {
+    background-color: #cfd8dc;
+    width: 100%;
+    padding: 5px 3px;
+    display: flex;
+    column-gap: 5px;
+}
+
+.input1 {
+    width: 40px;
+}
+
+.input3 {
+    width: 100px;
+}
+
+#divLocalizarPedido>input:disabled {
+    background-color: #e7ecee;
+}
+
+#divLocalizarPedido>button {
+    padding: 5px;
+    width: 200px;
+}
+
+div>input {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+#precoTotal {
+    background-color: #b0bec5;
+    width: fit-content;
+    padding: 3px;
+    color: #d23031;
+    font-weight: bold;
+    align-self: flex-end;
+}
